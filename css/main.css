@@ -1,5 +1,35 @@
-* {
-  margin: 0;
-  padding: 0;
-  color: red;
+body {
+  position: fixed;
+  background-image: url("../assets/bg-full.jpg");
+  background-repeat: no-repeat;
+  background-size: 250%;
+  background-position: top;
+  color: white;
+  height: 100%;
+  width: 100%;
+}
+
+.cta {
+  margin-top: 20px;
+}
+
+.cta > a {
+  margin-top: 10px;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px rgba(0,0,0,0.3);
+}
+
+div.logo-image {
+  width: 100%;
+  text-align: center;
+  margin-top: 2em;
+}
+
+.logo-image > img {
+  width: 70%;
+  -webkit-filter: drop-shadow(3px 3px 2px rgba(0,0,0,0.5));
+  -ms-filter: drop-shadow(3px 3px 2px rgba(0,0,0,0.5));
+          filter: drop-shadow(3px 3px 2px rgba(0,0,0,0.5));
 }
