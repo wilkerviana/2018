@@ -16,6 +16,9 @@ p.main-text {
 
 .cta {
   margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 2%;
 }
 
 .cta > a {
