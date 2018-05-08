@@ -1,0 +1,26 @@
+{
+  "name": "abcdev-2018",
+  "version": "0.0.0",
+  "description": "Site oficial do maior evento de desenvolvimento de software do Grande ABC - ABC-Dev 2018",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abc-dev/2018.git"
+  },
+  "keywords": [
+    "evento de tecnologia",
+    "grande ABC",
+    "ABC-Dev"
+  ],
+  "author": "@abc_developers",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/abc-dev/2018/issues"
+  },
+  "homepage": "https://github.com/abc-dev/2018#readme"
+}
