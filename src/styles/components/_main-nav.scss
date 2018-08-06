@@ -1,0 +1,30 @@
+.main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: layer(high);
+
+  width: 100%;
+  background-color: color(light);
+  box-shadow: $box-shadow-base;
+
+  a {
+    display: inline-block;
+    padding: rem(10px);
+    border: solid 1px #f00;
+  }
+
+  .social-media {
+    float: right;
+  }
+
+  .go-to-start {
+    display: none;
+
+    background: {
+      image: url('#{$images-path}/logo-abcdev.svg');
+      repeat: no-repeat;
+      size: cover;
+    };
+  }
+}

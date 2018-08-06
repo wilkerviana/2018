@@ -1,0 +1,13 @@
+/// Mapa de tamanhos de fontes da aplicação
+/// Antes de criar um novo padrão, verifique que realmente é necessário
+///
+/// @group   Settings [Configurações]
+$font-sizes: (
+  xxsmall: 10px,
+  xsmall: 12px,
+  small: 14px,
+  medium: 16px,
+  large: 22px,
+  xlarge: 30px,
+  xxlarge: 50px
+) !default;

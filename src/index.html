@@ -17,6 +17,7 @@
     <!-- Place favicon.ico in the root src directory -->
 
     <link rel="stylesheet" href="/styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Oswald:500,700" rel="stylesheet">
   </head>
   <body>
     <noscript>
@@ -26,11 +27,11 @@
       <p class="browserupgrade">Você está utilizando um navegador <strong>antigo</strong>. Por favor <a href="http://browsehappy.com/">atualize seu navegador</a> para ter uma experiência melhor.</p>
     <![endif]-->
 
-    <header>
+    <header class="cover" id="inicio">
       <div>
-        <img src="./images/parque-chico-mendes-scs.jpg" alt="Fotografia do parque Chico Mendes em São Caetano do Sul">
+        <img class="logo" src="images/logo-abcdev.svg" alt="Logo ABCDev">
         <h1>ABC-Dev 2018</h1>
-        <h2>A terceira edição da conferência sobre desenvolvimento de software
+        <h2>3ª edição da <b>maior conferência</b> sobre desenvolvimento de software
 do Grande ABC</h2>
         <time datetime="2018-09-22">22 de setembro de 2018</time>
         <p>
@@ -40,15 +41,18 @@ do Grande ABC</h2>
         </p>
         <a href="https://credencial.imasters.com.br/abc-dev-2018">Comprar ingressos</a>
       </div>
-      <nav>
+      <nav class="main-nav">
+        <a href="#inicio" class="go-to-start">
+          <span class="screen-reader-only">Ir para o inicio</span>
+        </a>
         <a href="#sobre">Sobre</a>
         <a href="#palestrantes">Palestrantes</a>
         <a href="#programacao">Programação</a>
         <a href="#localizacao">Localização</a>
         <a href="#patrocinio">Patrocínio</a>
         <a href="#contato">Contato</a>
+        <a href="https://credencial.imasters.com.br/abc-dev-2018">Comprar ingressos</a>
         <div class="social-media">
-          <a href="https://credencial.imasters.com.br/abc-dev-2018">Comprar ingressos</a>
           <a href="https://github.com/abc-dev" title="Link para o Github do abc-dev">Github</a>
           <a href="https://twitter.com/abc_developers" title="Link para o Twitter do abc-dev">Twitter</a>
           <a href="https://www.instagram.com/abcdevelopers/" title="Link para o Instagram do abc-dev">Instagram</a>
@@ -332,7 +336,7 @@ do Grande ABC</h2>
       <h2>Programação</h2>
       <p>Este ano será muito especial, teremos trilhas! \o/</p>
 
-      <table>
+      <table border="1">
         <thead>
           <tr>
             <th>Horario</th>
@@ -344,17 +348,15 @@ do Grande ABC</h2>
         <tbody>
           <tr>
             <th>08:00 as 08:45</th>
-            <td>
+            <td colspan="3">
               <h4>Titulo palestra</h4>
               <p>Descrição palestra</p>
               <a href="#" class="speaker-name">Nome palestrante</a>
             </td>
-            <td>
-              <h4>Titulo palestra</h4>
-              <p>Descrição palestra</p>
-              <a href="#" class="speaker-name">Nome palestrante</a>
-            </td>
-            <td>
+          </tr>
+          <tr>
+            <th>08:45 as 09:00</th>
+            <td colspan="3">
               <h4>Titulo palestra</h4>
               <p>Descrição palestra</p>
               <a href="#" class="speaker-name">Nome palestrante</a>
@@ -372,7 +374,7 @@ do Grande ABC</h2>
               <p>Descrição palestra</p>
               <a href="#" class="speaker-name">Nome palestrante</a>
             </td>
-            <td>
+            <td rowspan="2">
               <h4>Titulo palestra</h4>
               <p>Descrição palestra</p>
               <a href="#" class="speaker-name">Nome palestrante</a>
@@ -380,29 +382,6 @@ do Grande ABC</h2>
           </tr>
           <tr>
             <th>08:00 as 08:45</th>
-            <td>
-              <h4>Titulo palestra</h4>
-              <p>Descrição palestra</p>
-              <a href="#" class="speaker-name">Nome palestrante</a>
-            </td>
-            <td>
-              <h4>Titulo palestra</h4>
-              <p>Descrição palestra</p>
-              <a href="#" class="speaker-name">Nome palestrante</a>
-            </td>
-            <td>
-              <h4>Titulo palestra</h4>
-              <p>Descrição palestra</p>
-              <a href="#" class="speaker-name">Nome palestrante</a>
-            </td>
-          </tr>
-          <tr>
-            <th>08:00 as 08:45</th>
-            <td>
-              <h4>Titulo palestra</h4>
-              <p>Descrição palestra</p>
-              <a href="#" class="speaker-name">Nome palestrante</a>
-            </td>
             <td>
               <h4>Titulo palestra</h4>
               <p>Descrição palestra</p>
