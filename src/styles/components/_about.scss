@@ -1,0 +1,36 @@
+.about-event {
+  margin: space(xlarge) auto;
+  text-align: center;
+  h2 {
+    text-align: center;
+    & span {
+      font-weight: bold;
+      letter-spacing: rem(2px);
+    }
+  }
+
+  h3 {
+    position: relative;
+
+    font-size: font-size(xlarge);
+    // text-align: left;
+    text-transform: uppercase;
+
+    &:after {
+      content: url("../images/svg/icons/codigo-conduta.svg");
+
+      position: absolute;
+      top: 100%;
+      left: calc(50% - 60px / 2);
+
+      transform: translateY(25%);
+    }
+    & + p {
+      margin-top: rem(100px);
+    }
+  }
+
+  p {
+    margin: space(large) auto;
+  }
+}
