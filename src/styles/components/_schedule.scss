@@ -6,6 +6,11 @@
   margin: space(xlarge) auto;
   padding: space(large) 0;
 
+  .wrapper {
+    @media (min-width: #{map-get($breakpoints, medium)}) {
+      display: flex;
+    }
+  }
   p {
     margin: space(medium) 0;
   }
@@ -34,6 +39,19 @@
       font-weight: bold;
       text-transform: uppercase;
     }
+
+    @media (min-width: #{map-get($breakpoints, medium)}) {
+      max-width: rem(350px);
+      &:after {
+        top: 50%;
+        left: 100%;
+
+        transform: translateX(50%) translateY(100%);
+      }
+      &:last-child:after {
+        display: none;
+      }
+    }
   }
 
   .track-info {
@@ -55,18 +73,8 @@
       font-weight: bold;
     }
 
-    // &:after {
-    //   content: "";
-    //   background: #{map-get($brand-colors, primary)};
-    //   border-radius: 50%;
-    //   position: absolute;
-    //   width: rem(20px);
-    //   height: rem(20px);
-
-    //   top: 100%;
-    //   left: 50%;
-
-    //   transform: translateX(-50%) translateY(50%);
-    // }
+    @media (min-width: #{map-get($breakpoints, medium)}) {
+      margin: space(large) auto;
+    }
   }
 }
