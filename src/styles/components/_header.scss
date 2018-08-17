@@ -4,9 +4,22 @@
     size: cover;
     repeat: no-repeat;
   }
+  color: white;
+
   position: relative;
 
   height: 100%;
+
+  @media (min-width: #{map-get($breakpoints, medium)}) {
+    background-image: url(../images/backgrounds/sao-bernardo-do-campo.jpg);
+    background-size: auto;
+    background-position: bottom right;
+    color: black;
+
+    height: 100vh;
+
+    z-index: layer(lowest);
+  }
 
   &::before,
   &::after {
@@ -30,11 +43,13 @@
 
   &::before {
     height: 60vh;
-    transform: skewY(10deg) translateY(-30vh);
+    transform: skewY(10deg) translateY(-25vh);
+    background-image: url(../images/backgrounds/santo-andre.jpg);
+    background-position: center;
   }
   &::after {
-    background-color: rgb(143, 143, 143);
-    transform: skewY(-10deg) translateY(70vh);
+    background-image: url(../images/backgrounds/sao-caetano-do-sul.jpg);
+    transform: skewY(-10deg) translateY(-40vh);
     height: 60vh;
   }
 
@@ -64,11 +79,17 @@
       top: space(xsmall);
       bottom: space(xlarge);
     }
+    @media (min-width: #{map-get($breakpoints, medium)}) {
+      margin: space(large) auto;
+    }
   }
 
   .intro {
     h2 {
       font-size: font-size(medium);
+      @media (min-width: #{map-get($breakpoints, medium)}) {
+        font-size: font-size(large);
+      }
     }
     .hamburguer {
       background: #{map-get($brand-colors, secondary)};
@@ -146,7 +167,9 @@
     @media (min-width: #{map-get($breakpoints, medium)}) {
       position: absolute;
       left: 0;
-      top: 25vh;
+      top: 30vh;
+
+      max-width: rem(800px);
     }
   }
 }

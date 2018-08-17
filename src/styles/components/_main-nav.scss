@@ -37,10 +37,12 @@
 
     padding: rem(16px) rem(24px);
 
-    font-size: rem(18px);
+    font-size: font-size(large);
+    font-weight: bold;
     text-transform: uppercase;
 
     @media (min-width: #{map-get($breakpoints, medium)}) {
+      color: white;
       display: inline-block;
     }
   }
@@ -63,5 +65,10 @@
   a {
     display: inline-block;
     margin: space(small);
+  }
+  @media (min-width: #{map-get($breakpoints, medium)}) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
   }
 }
