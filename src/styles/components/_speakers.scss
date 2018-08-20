@@ -1,6 +1,11 @@
 .speakers {
   margin: space(xlarge) auto;
+
   text-align: center;
+
+  @media (min-width: #{map-get($breakpoints, medium)}) {
+    padding-bottom: space(large);
+  }
 
   h2 {
     margin: space(large) auto;
@@ -10,22 +15,78 @@
     display: inline-block;
   }
 
+  .all-speaker {
+    margin: space(large) auto;
+    max-width: rem(1080px);
+
+    @media (min-width: #{map-get($breakpoints, medium)}) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
   .speaker {
     max-width: rem(260px);
     margin: space(medium) auto;
+
+    overflow: hidden;
+
+    transition: filter 0.6s ease-in;
+
+    &:nth-child(odd) {
+      @media (min-width: #{map-get($breakpoints, medium)}) {
+        top: rem(50px);
+      }
+    }
+
+    &:hover {
+      -webkit-filter: grayscale(1);
+      -moz-filter: grayscale(1);
+      filter: grayscale(1);
+    }
+
+    &:hover > .speaker-info {
+      @media (min-width: #{map-get($breakpoints, medium)}) {
+        left: rem(10px);
+
+        transform: translateY(-100%);
+      }
+    }
+
+    @media (min-width: #{map-get($breakpoints, medium)}) {
+      margin: 0;
+      position: relative;
+    }
+
     .speaker-image {
-      height: rem(360px);
+      height: rem(350px);
       width: rem(260px);
 
       overflow: hidden;
     }
+
     .speaker-info {
       margin: space(small) auto;
+      z-index: layer(highest);
+
       h4 {
         font-size: font-size(large);
+
+        @media (min-width: #{map-get($breakpoints, medium)}) {
+          color: white;
+        }
       }
+
       a {
         margin: space(small) space(xsmall);
+      }
+
+      @media (min-width: #{map-get($breakpoints, medium)}) {
+        margin: 0;
+        position: absolute;
+        text-align: left;
+
+        transition: transform 0.4s ease-in;
       }
     }
   }
