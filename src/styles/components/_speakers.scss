@@ -4,6 +4,8 @@
   text-align: center;
 
   @media (min-width: #{map-get($breakpoints, medium)}) {
+    color: white;
+
     padding-bottom: space(large);
   }
 
@@ -31,7 +33,7 @@
 
     overflow: hidden;
 
-    transition: filter 0.6s ease-in;
+    transition: filter 0.4s ease-in;
 
     &:nth-child(odd) {
       @media (min-width: #{map-get($breakpoints, medium)}) {
@@ -40,14 +42,17 @@
     }
 
     &:hover {
-      -webkit-filter: grayscale(1);
-      -moz-filter: grayscale(1);
-      filter: grayscale(1);
+      @media (min-width: #{map-get($breakpoints, medium)}) {
+        -webkit-filter: grayscale(1);
+        -moz-filter: grayscale(1);
+        filter: grayscale(1);
+      }
     }
 
     &:hover > .speaker-info {
       @media (min-width: #{map-get($breakpoints, medium)}) {
-        left: rem(10px);
+        background: rgba(0, 0, 0, 0.4);
+        top: 100%;
 
         transform: translateY(-100%);
       }
@@ -67,26 +72,37 @@
 
     .speaker-info {
       margin: space(small) auto;
+
       z-index: layer(highest);
+
+      transition: background 3s linear;
+      transition-delay: 1s;
 
       h4 {
         font-size: font-size(large);
-
-        @media (min-width: #{map-get($breakpoints, medium)}) {
-          color: white;
-        }
       }
 
       a {
         margin: space(small) space(xsmall);
       }
 
+      p {
+        @media (min-width: #{map-get($breakpoints, medium)}) {
+          font-size: font-size(small);
+        }
+      }
+
       @media (min-width: #{map-get($breakpoints, medium)}) {
-        margin: 0;
+        height: rem(350px);
         position: absolute;
+
+        margin: 0;
+        padding-left: rem(10px);
+        padding-top: rem(10px);
+
         text-align: left;
 
-        transition: transform 0.4s ease-in;
+        transition: transform 0.5s ease-in-out;
       }
     }
   }
